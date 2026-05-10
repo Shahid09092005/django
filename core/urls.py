@@ -17,11 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 # Importing the views from the home app to use them in the URL patterns.
-from home.views import home, about, contact
+from home.views import *
+from vege.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home , name="home"),
     path('about/', about, name="about"),
     path('contact/', contact , name="contact"),
+    path('receipies/', receipies , name="receipies"),
 ]
